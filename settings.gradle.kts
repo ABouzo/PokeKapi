@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PokeKapi"
 include(":lib")
+include(":composeApp")
