@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
 //    alias(libs.plugins.sqlDelight)
     alias(libs.plugins.kotlinxSerialization)
+    `maven-publish`
 }
 
 kotlin {
@@ -66,6 +67,19 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+project.afterEvaluate {
+    publishing {
+        publications {
+            libraryProject(MavenPublication) {
+                setGroupId 'com.ruchiram4'
+                setArtifactId 'networking-release'
+                version '1.0'
+                artifact bundleReleaseAar
+            }
+        }
     }
 }
 
