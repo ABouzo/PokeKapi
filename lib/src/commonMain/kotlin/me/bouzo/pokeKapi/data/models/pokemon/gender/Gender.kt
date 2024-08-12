@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.gender
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result
@@ -17,5 +17,5 @@ data class Gender(
     val id: Int,
     val name: String,
     @SerialName("pokemon_species_details") val pokemonSpeciesDetails: List<PokemonSpeciesGender>,
-    @SerialName("required_for_evolution") val requiredForEvolution: List<NamedApiResource>
+    @SerialName("required_for_evolution") val requiredForEvolution: List<NamedAPIResource>
 )

@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.colors
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the
@@ -19,5 +19,5 @@ data class PokemonColor(
     val id: Int,
     val name: String,
     val names: List<Name>,
-    @SerialName("pokemon_species") val pokemonSpecies: List<NamedApiResource>
+    @SerialName("pokemon_species") val pokemonSpecies: List<NamedAPIResource>
 )

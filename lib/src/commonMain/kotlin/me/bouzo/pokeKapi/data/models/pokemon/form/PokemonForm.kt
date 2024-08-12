@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.pokemon.pokemon.PokemonFormType
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Some Pokémon may appear in one of multiple, visually different forms. These differences are
@@ -35,10 +35,10 @@ data class PokemonForm(
     @SerialName("is_battle_only") val isBattleOnly: Boolean,
     @SerialName("is_mega") val isMega: Boolean,
     @SerialName("form_name") val formName: String,
-    val pokemon: NamedApiResource,
+    val pokemon: NamedAPIResource,
     val types: List<PokemonFormType>,
     val sprites: PokemonFormSprites,
-    @SerialName("version_group") val versionGroup: NamedApiResource,
+    @SerialName("version_group") val versionGroup: NamedAPIResource,
     val names: List<Name>,
     @SerialName("form_names") val formNames: List<Name>,
 )

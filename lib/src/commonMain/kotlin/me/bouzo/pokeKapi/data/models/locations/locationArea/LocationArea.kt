@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.locations.locationArea
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Location areas are sections of areas, such as floors in a building or cave. Each area has its
@@ -25,7 +25,7 @@ data class LocationArea(
     val name: String,
     @SerialName("game_index") val gameIndex: Int,
     @SerialName("encounter_method_rates") val encounterMethodRates: List<EncounterMethodRate>,
-    val location: NamedApiResource,
+    val location: NamedAPIResource,
     val names: List<Name>,
     @SerialName("pokemon_encounters") val pokemonEncounters: List<PokemonEncounter>
 )

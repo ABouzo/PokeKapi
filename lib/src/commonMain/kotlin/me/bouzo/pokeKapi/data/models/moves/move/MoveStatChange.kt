@@ -1,7 +1,7 @@
 package me.bouzo.pokeKapi.data.models.moves.move
 
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property change The amount of change.
@@ -10,5 +10,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class MoveStatChange(
     val change: Int,
-    val stat: NamedApiResource
+    val stat: NamedAPIResource
 )

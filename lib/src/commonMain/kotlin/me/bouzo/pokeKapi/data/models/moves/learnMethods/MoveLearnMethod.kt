@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Description
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Methods by which Pokémon can learn moves.
@@ -20,5 +20,5 @@ data class MoveLearnMethod(
     val name: String,
     val descriptions: List<Description>,
     val names: List<Name>,
-    @SerialName("version_groups") val versionGroups: List<NamedApiResource>
+    @SerialName("version_groups") val versionGroups: List<NamedAPIResource>
 )

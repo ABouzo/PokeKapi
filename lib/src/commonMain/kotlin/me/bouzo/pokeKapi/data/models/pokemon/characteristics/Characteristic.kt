@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.characteristics
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Description
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic
@@ -19,6 +19,6 @@ data class Characteristic(
     val id: Int,
     @SerialName("gene_modulo") val geneModulo: Int,
     @SerialName("possible_values") val possibleValues: List<Int>,
-    @SerialName("highest_stat") val highestStat: NamedApiResource,
+    @SerialName("highest_stat") val highestStat: NamedAPIResource,
     val descriptions: List<Description>
 )

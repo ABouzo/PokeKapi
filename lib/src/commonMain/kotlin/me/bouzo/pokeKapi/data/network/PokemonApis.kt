@@ -38,8 +38,10 @@ interface PokemonApis {
     suspend fun getGrowthRate(id: Identifier): Result<GrowthRate>
     suspend fun getNature(id: Identifier): Result<Nature>
     suspend fun getPokeathlonStat(id: Identifier): Result<PokeathlonStat>
-    suspend fun getPokemonLocationArea(id: Identifier): Result<LocationAreaEncounter>
+    suspend fun getPokemonLocationArea(id: Identifier): Result<List<LocationAreaEncounter>>
     suspend fun getType(id: Identifier): Result<Type>
+
+    companion object
 }
 
 internal class PokemonRemoteApis(private val baseApi: BaseApi) : PokemonApis {
@@ -59,7 +61,7 @@ internal class PokemonRemoteApis(private val baseApi: BaseApi) : PokemonApis {
         baseApi.fetch("/pokeathlon-stat/$id")
 
     override suspend fun getPokemon(id: Identifier): Result<Pokemon> = baseApi.fetch("/pokemon/$id")
-    override suspend fun getPokemonLocationArea(id: Identifier): Result<LocationAreaEncounter> =
+    override suspend fun getPokemonLocationArea(id: Identifier): Result<List<LocationAreaEncounter>> =
         baseApi.fetch("/pokemon/$id/encounters")
 
     override suspend fun getPokemonColor(id: Identifier): Result<PokemonColor> =

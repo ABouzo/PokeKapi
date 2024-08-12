@@ -10,5 +10,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class VersionGameIndex(
     @SerialName("game_index") val gameIndex: Int,
-    val version: NamedApiResource,
+    val version: NamedAPIResource,
 )

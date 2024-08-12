@@ -1,7 +1,7 @@
 package me.bouzo.pokeKapi.data.models.pokemon.pokemonSpecies
 
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property genus The localized genus for the referenced Pokémon species
@@ -10,5 +10,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class Genus(
     val genus: String,
-    val language: NamedApiResource,
+    val language: NamedAPIResource,
 )

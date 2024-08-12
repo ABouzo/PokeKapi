@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.pokemonSpecies
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property entryNumber The index number within the Pokédex.
@@ -11,5 +11,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class PokemonSpeciesDexEntry(
     @SerialName("entry_number") val entryNumber: Int,
-    val pokedex: NamedApiResource,
+    val pokedex: NamedAPIResource,
 )

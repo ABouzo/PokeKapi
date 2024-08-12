@@ -2,9 +2,9 @@ package me.bouzo.pokeKapi.data.models.pokemon.stats
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.ApiResource
+import me.bouzo.pokeKapi.data.models.utility.APIResource
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows
@@ -27,7 +27,7 @@ data class Stat(
     @SerialName("is_battle_only") val isBattleOnly: Boolean,
     @SerialName("affecting_moves") val affectingMoves: MoveStatAffectSets,
     @SerialName("affecting_natures") val affectingNatures: NatureStatAffectSets,
-    val characteristics: List<ApiResource>,
-    @SerialName("move_damage_class") val moveDamageClass: NamedApiResource,
+    val characteristics: List<APIResource>,
+    @SerialName("move_damage_class") val moveDamageClass: NamedAPIResource,
     val names: List<Name>,
 )

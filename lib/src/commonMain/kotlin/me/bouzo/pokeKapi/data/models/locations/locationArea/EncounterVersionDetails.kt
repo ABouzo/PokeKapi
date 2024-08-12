@@ -1,7 +1,7 @@
 package me.bouzo.pokeKapi.data.models.locations.locationArea
 
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property rate The chance of an encounter to occur.
@@ -10,5 +10,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class EncounterVersionDetails(
     val rate: Int,
-    val version: NamedApiResource
+    val version: NamedAPIResource
 )

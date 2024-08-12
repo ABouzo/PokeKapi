@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.types
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property generation The last generation in which the referenced type had the listed damage relations
@@ -10,6 +10,6 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
  */
 @Serializable
 data class TypeRelationsPast(
-    val generation: NamedApiResource,
+    val generation: NamedAPIResource,
     @SerialName("damage_relations") val damageRelations: TypeRelations
 )

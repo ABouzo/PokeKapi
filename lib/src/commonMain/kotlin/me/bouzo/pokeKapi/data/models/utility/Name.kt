@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class Name(
-    val name: String, val language: NamedApiResource
+    val name: String, val language: NamedAPIResource
 )

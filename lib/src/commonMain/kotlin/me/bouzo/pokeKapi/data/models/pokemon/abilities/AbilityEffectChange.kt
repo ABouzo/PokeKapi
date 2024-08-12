@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.abilities
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Effect
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property effectEntries The previous effect of this ability listed in different languages.
@@ -12,5 +12,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class AbilityEffectChange(
     @SerialName("effect_entries") val effectEntries: List<Effect>,
-    @SerialName("version_group") val versionGroup: NamedApiResource
+    @SerialName("version_group") val versionGroup: NamedAPIResource
 )

@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class MachineVersionDetail(
-    val machine: ApiResource, @SerialName("version_group") val versionGroup: NamedApiResource
+    val machine: APIResource, @SerialName("version_group") val versionGroup: NamedAPIResource
 )

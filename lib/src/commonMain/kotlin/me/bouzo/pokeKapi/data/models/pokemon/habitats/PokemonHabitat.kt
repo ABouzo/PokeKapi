@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.habitats
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.
@@ -17,5 +17,5 @@ data class PokemonHabitat(
     val id: Int,
     val name: String,
     val names: List<Name>,
-    @SerialName("pokemon_species") val pokemonSpecies: List<NamedApiResource>,
+    @SerialName("pokemon_species") val pokemonSpecies: List<NamedAPIResource>,
 )

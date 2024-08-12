@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.shape
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property awesomeName The localized "scientific" name for an API resource in a specific language.
@@ -12,7 +12,7 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class AwesomeName(
     @SerialName("awesome_name") val awesomeName: String,
-    val language: NamedApiResource,
+    val language: NamedAPIResource,
 )
 
 /**
@@ -29,5 +29,5 @@ data class PokemonShape(
     val name: String,
     @SerialName("awesome_names") val awesomeNames: List<AwesomeName>,
     val names: List<Name>,
-    @SerialName("pokemon_species") val pokemonSpecies: List<NamedApiResource>,
+    @SerialName("pokemon_species") val pokemonSpecies: List<NamedAPIResource>,
 )

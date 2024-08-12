@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.types
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property noDamageTo A list of types this type has no effect on.
@@ -14,10 +14,10 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
  */
 @Serializable
 data class TypeRelations(
-    @SerialName("no_damage_to") val noDamageTo: List<NamedApiResource>,
-    @SerialName("half_damage_to") val halfDamageTo: List<NamedApiResource>,
-    @SerialName("double_damage_to") val doubleDamageTo: List<NamedApiResource>,
-    @SerialName("no_damage_from") val noDamageFrom: List<NamedApiResource>,
-    @SerialName("half_damage_from") val halfDamageFrom: List<NamedApiResource>,
-    @SerialName("double_damage_from") val doubleDamageFrom: List<NamedApiResource>
+    @SerialName("no_damage_to") val noDamageTo: List<NamedAPIResource>,
+    @SerialName("half_damage_to") val halfDamageTo: List<NamedAPIResource>,
+    @SerialName("double_damage_to") val doubleDamageTo: List<NamedAPIResource>,
+    @SerialName("no_damage_from") val noDamageFrom: List<NamedAPIResource>,
+    @SerialName("half_damage_from") val halfDamageFrom: List<NamedAPIResource>,
+    @SerialName("double_damage_from") val doubleDamageFrom: List<NamedAPIResource>
 )

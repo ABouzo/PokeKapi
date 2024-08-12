@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.abilities
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 import me.bouzo.pokeKapi.data.models.utility.VerboseEffect
 
 /**
@@ -24,7 +24,7 @@ data class Ability(
     val id: Int,
     val name: String,
     @SerialName("is_main_series") val isMainSeries: Boolean,
-    val generation: NamedApiResource,
+    val generation: NamedAPIResource,
     val names: List<Name>,
     @SerialName("effect_entries") val effectEntries: List<VerboseEffect>,
     @SerialName("effect_changes") val effectChanges: List<AbilityEffectChange>,

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
@@ -73,12 +75,12 @@ android {
 project.afterEvaluate {
     publishing {
         publications {
-            libraryProject(MavenPublication) {
-                setGroupId 'com.ruchiram4'
-                setArtifactId 'networking-release'
-                version '1.0'
-                artifact bundleReleaseAar
-            }
+//            libraryProject(MavenPublication) {
+//                groupId = "com.ruchiram4"
+//                artifactId = "networking-release"
+//                version = "1.0"
+//                artifact bundleReleaseAar
+//            }
         }
     }
 }

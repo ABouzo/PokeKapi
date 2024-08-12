@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.types
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property slot The order the Pokémon's types are listed in.
@@ -11,5 +11,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class TypePokemon(
     val slot: Int,
-    @SerialName("pokemon") val pokemon: NamedApiResource
+    @SerialName("pokemon") val pokemon: NamedAPIResource
 )

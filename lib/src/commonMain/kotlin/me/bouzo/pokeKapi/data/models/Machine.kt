@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Machines are the representation of items that teach moves to Pokémon. They vary from version to
@@ -16,8 +16,8 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class Machine(
     val id: Int,
-    val item: NamedApiResource,
-    val move: NamedApiResource,
+    val item: NamedAPIResource,
+    val move: NamedAPIResource,
     @SerialName("version_group")
-    val versionGroup: NamedApiResource
+    val versionGroup: NamedAPIResource
 )

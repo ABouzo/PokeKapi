@@ -17,6 +17,8 @@ interface MoveApis {
     suspend fun getMoveDamageClass(id: Identifier): Result<MoveDamageClass>
     suspend fun getMoveLearnMethod(id: Identifier): Result<MoveLearnMethod>
     suspend fun getMoveTarget(id: Identifier): Result<MoveTarget>
+
+    companion object
 }
 
 internal class MoveRemoteApis(private val baseApi: BaseApi) : MoveApis {

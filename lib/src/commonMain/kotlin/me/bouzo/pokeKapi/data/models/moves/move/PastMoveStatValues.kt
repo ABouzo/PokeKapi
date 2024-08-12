@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.moves.move
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 import me.bouzo.pokeKapi.data.models.utility.VerboseEffect
 
 /**
@@ -21,6 +21,6 @@ data class PastMoveStatValues(
     val power: Int?,
     val pp: Int,
     @SerialName("effect_entries") val effectEntries: List<VerboseEffect>,
-    val type: NamedApiResource,
-    @SerialName("version_group") val versionGroup: NamedApiResource
+    val type: NamedAPIResource,
+    @SerialName("version_group") val versionGroup: NamedAPIResource
 )

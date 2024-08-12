@@ -3,10 +3,10 @@ package me.bouzo.pokeKapi.data.models.moves.move
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.pokemon.abilities.AbilityEffectChange
-import me.bouzo.pokeKapi.data.models.utility.ApiResource
+import me.bouzo.pokeKapi.data.models.utility.APIResource
 import me.bouzo.pokeKapi.data.models.utility.MachineVersionDetail
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 import me.bouzo.pokeKapi.data.models.utility.VerboseEffect
 
 /**
@@ -47,20 +47,20 @@ data class Move(
     val priority: Int,
     val power: Int?,
     @SerialName("contest_combos") val contestCombos: ContestComboSets,
-    @SerialName("contest_type") val contestType: NamedApiResource,
-    @SerialName("contest_effect") val contestEffect: ApiResource,
-    @SerialName("damage_class") val damageClass: NamedApiResource,
+    @SerialName("contest_type") val contestType: NamedAPIResource,
+    @SerialName("contest_effect") val contestEffect: APIResource,
+    @SerialName("damage_class") val damageClass: NamedAPIResource,
     @SerialName("effect_entries") val effectEntries: List<VerboseEffect>,
     @SerialName("effect_changes") val effectChanges: List<AbilityEffectChange>,
-    @SerialName("learned_by_pokemon") val learnedByPokemon: List<NamedApiResource>,
+    @SerialName("learned_by_pokemon") val learnedByPokemon: List<NamedAPIResource>,
     @SerialName("flavor_text_entries") val flavorTextEntries: List<MoveFlavorText>,
-    val generation: NamedApiResource,
+    val generation: NamedAPIResource,
     val machines: List<MachineVersionDetail>,
     val meta: MoveMetaData,
     val names: List<Name>,
     @SerialName("past_values") val pastValues: List<PastMoveStatValues>,
     @SerialName("stat_changes") val statChanges: List<MoveStatChange>,
-    @SerialName("super_contest_effect") val superContestEffect: ApiResource,
-    val target: NamedApiResource,
-    val type: NamedApiResource
+    @SerialName("super_contest_effect") val superContestEffect: APIResource,
+    val target: NamedAPIResource,
+    val type: NamedAPIResource
 )

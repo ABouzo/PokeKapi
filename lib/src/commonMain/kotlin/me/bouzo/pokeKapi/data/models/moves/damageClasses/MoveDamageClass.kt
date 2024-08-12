@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.moves.damageClasses
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Description
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Damage classes moves can have, e.g. physical, special, or non-damaging.
@@ -18,6 +18,6 @@ data class MoveDamageClass(
     val id: Int,
     val name: String,
     val descriptions: List<Description>,
-    val moves: List<NamedApiResource>,
+    val moves: List<NamedAPIResource>,
     val names: List<Name>
 )

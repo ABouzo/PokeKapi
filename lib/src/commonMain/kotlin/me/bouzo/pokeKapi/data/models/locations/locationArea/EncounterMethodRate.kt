@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.locations.locationArea
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property encounterMethod The method in which Pokémon may be encountered in an area.
@@ -11,7 +11,7 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class EncounterMethodRate(
     @SerialName("encounter_method")
-    val encounterMethod: NamedApiResource,
+    val encounterMethod: NamedAPIResource,
 
     @SerialName("version_details")
     val versionDetails: List<EncounterVersionDetails>

@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.abilities
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property isHidden Whether or not this a hidden ability for the referenced Pokémon.
@@ -13,5 +13,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 data class AbilityPokemon(
     @SerialName("is_hidden") val isHidden: Boolean,
     val slot: Int,
-    val pokemon: NamedApiResource,
+    val pokemon: NamedAPIResource,
 )

@@ -2,11 +2,11 @@ package me.bouzo.pokeKapi.data.models.pokemon.pokemonSpecies
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.ApiResource
+import me.bouzo.pokeKapi.data.models.utility.APIResource
 import me.bouzo.pokeKapi.data.models.utility.Description
 import me.bouzo.pokeKapi.data.models.utility.FlavorText
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are
@@ -64,15 +64,15 @@ data class PokemonSpecies(
     val hasGenderDifferences: Boolean,
     @SerialName("forms_switchable")
     val formsSwitchable: Boolean,
-    @SerialName("growth_rate") val growthRate: NamedApiResource,
+    @SerialName("growth_rate") val growthRate: NamedAPIResource,
     @SerialName("pokedex_numbers") val pokedexNumbers: List<PokemonSpeciesDexEntry>,
-    @SerialName("egg_groups") val eggGroups: List<NamedApiResource>,
-    val color: NamedApiResource,
-    val shape: NamedApiResource,
-    @SerialName("evolves_from_species") val evolvesFromSpecies: NamedApiResource,
-    @SerialName("evolution_chain") val evolutionChain: ApiResource,
-    val habitat: NamedApiResource,
-    val generation: NamedApiResource,
+    @SerialName("egg_groups") val eggGroups: List<NamedAPIResource>,
+    val color: NamedAPIResource,
+    val shape: NamedAPIResource,
+    @SerialName("evolves_from_species") val evolvesFromSpecies: NamedAPIResource,
+    @SerialName("evolution_chain") val evolutionChain: APIResource,
+    val habitat: NamedAPIResource,
+    val generation: NamedAPIResource,
     val names: List<Name>,
     @SerialName("pal_park_encounters") val palParkEncounters: List<PalParkEncounterArea>,
     @SerialName("flavor_text_entries") val flavorTextEntries: List<FlavorText>,

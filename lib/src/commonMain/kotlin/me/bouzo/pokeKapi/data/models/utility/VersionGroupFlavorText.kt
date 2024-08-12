@@ -11,6 +11,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class VersionGroupFlavorText(
     val text: String,
-    val language: NamedApiResource,
-    @SerialName("version_group") val versionGroup: NamedApiResource,
+    val language: NamedAPIResource,
+    @SerialName("version_group") val versionGroup: NamedAPIResource,
 )

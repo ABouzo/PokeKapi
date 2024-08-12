@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.pokemon
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 import me.bouzo.pokeKapi.data.models.utility.VersionGameIndex
 
 /**
@@ -41,7 +41,7 @@ data class Pokemon(
     val order: Int,
     val weight: Int,
     val abilities: List<PokemonAbility>,
-    val forms: List<NamedApiResource>,
+    val forms: List<NamedAPIResource>,
     val game_indices: List<VersionGameIndex>,
     val held_items: List<PokemonHeldItem>,
     val location_area_encounters: String,
@@ -49,7 +49,7 @@ data class Pokemon(
     val past_types: List<PokemonTypePast>,
     val sprites: PokemonSprites,
     val cries: PokemonCries,
-    val species: NamedApiResource,
+    val species: NamedAPIResource,
     val stats: List<PokemonStat>,
     val types: List<PokemonType>,
 )
@@ -61,7 +61,7 @@ data class Pokemon(
  */
 @Serializable
 data class PokemonAbility(
-    @SerialName("is_hidden") val isHidden: Boolean, val slot: Int, val ability: NamedApiResource
+    @SerialName("is_hidden") val isHidden: Boolean, val slot: Int, val ability: NamedAPIResource
 )
 
 
@@ -71,7 +71,7 @@ data class PokemonAbility(
  */
 @Serializable
 data class PokemonType(
-    val slot: Int, val type: NamedApiResource
+    val slot: Int, val type: NamedAPIResource
 )
 
 typealias PokemonFormType = PokemonType
@@ -83,7 +83,7 @@ typealias PokemonFormType = PokemonType
  */
 @Serializable
 data class PokemonTypePast(
-    val generation: NamedApiResource, val types: List<PokemonType>
+    val generation: NamedAPIResource, val types: List<PokemonType>
 )
 
 /**
@@ -92,7 +92,7 @@ data class PokemonTypePast(
  */
 @Serializable
 data class PokemonHeldItem(
-    val item: NamedApiResource, val version_details: List<PokemonHeldItemVersion>
+    val item: NamedAPIResource, val version_details: List<PokemonHeldItemVersion>
 )
 
 /**
@@ -101,7 +101,7 @@ data class PokemonHeldItem(
  */
 @Serializable
 data class PokemonHeldItemVersion(
-    val version: NamedApiResource, val rarity: Int
+    val version: NamedAPIResource, val rarity: Int
 )
 
 /**
@@ -110,7 +110,7 @@ data class PokemonHeldItemVersion(
  */
 @Serializable
 data class PokemonMove(
-    val move: NamedApiResource,
+    val move: NamedAPIResource,
     @SerialName("version_group_details") val versionGroupDetails: List<PokemonMoveVersion>
 )
 
@@ -121,8 +121,8 @@ data class PokemonMove(
  */
 @Serializable
 data class PokemonMoveVersion(
-    @SerialName("move_learn_method") val moveLearnMethod: NamedApiResource,
-    @SerialName("version_group") val versionGroup: NamedApiResource,
+    @SerialName("move_learn_method") val moveLearnMethod: NamedAPIResource,
+    @SerialName("version_group") val versionGroup: NamedAPIResource,
     @SerialName("level_learned_at") val levelLearnedAt: Int
 )
 
@@ -133,7 +133,7 @@ data class PokemonMoveVersion(
  */
 @Serializable
 data class PokemonStat(
-    val stat: NamedApiResource, val effort: Int, @SerialName("base_stat") val baseStat: Int
+    val stat: NamedAPIResource, val effort: Int, @SerialName("base_stat") val baseStat: Int
 )
 
 /**

@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.moves.categories
 
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Description
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 
 /**
@@ -16,6 +16,6 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 data class MoveCategory(
     val id: Int,
     val name: String,
-    val moves: List<NamedApiResource>,
+    val moves: List<NamedAPIResource>,
     val descriptions: List<Description>
 )

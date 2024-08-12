@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.natures
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property lowHpPreference Chance of using the move, in percent, if HP is under one half.
@@ -13,5 +13,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 data class MoveBattleStylePreference(
     @SerialName("low_hp_preference") val lowHpPreference: Int,
     @SerialName("high_hp_preference") val highHpPreference: Int,
-    @SerialName("move_battle_style") val moveBattleStyle: NamedApiResource
+    @SerialName("move_battle_style") val moveBattleStyle: NamedAPIResource
 )

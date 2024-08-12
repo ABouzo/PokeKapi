@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.GenerationGameIndex
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Types are properties for Pokémon and their moves. Each type has three properties: which types of
@@ -28,9 +28,9 @@ data class Type(
     @SerialName("damage_relations") val damageRelations: TypeRelations,
     @SerialName("past_damage_relations") val pastDamageRelations: List<TypeRelationsPast>,
     @SerialName("game_indices") val gameIndices: List<GenerationGameIndex>,
-    val generation: NamedApiResource,
-    @SerialName("move_damage_class") val moveDamageClass: NamedApiResource,
+    val generation: NamedAPIResource,
+    @SerialName("move_damage_class") val moveDamageClass: NamedAPIResource,
     val names: List<Name>,
     val pokemon: List<TypePokemon>,
-    val moves: List<NamedApiResource>
+    val moves: List<NamedAPIResource>
 )

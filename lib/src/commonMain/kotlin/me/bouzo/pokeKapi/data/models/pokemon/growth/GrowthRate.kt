@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.growth
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Description
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Growth rates are the speed with which Pokémon gain levels through experience.
@@ -21,5 +21,5 @@ data class GrowthRate(
     val formula: String,
     val descriptions: List<Description>,
     @SerialName("levels") val levels: List<GrowthRateExperienceLevel>,
-    @SerialName("pokemon_species") val pokemonSpecies: List<NamedApiResource>
+    @SerialName("pokemon_species") val pokemonSpecies: List<NamedAPIResource>
 )

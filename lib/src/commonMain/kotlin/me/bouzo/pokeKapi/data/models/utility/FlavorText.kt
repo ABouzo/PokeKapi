@@ -14,6 +14,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class FlavorText(
     @SerialName("flavor_text") val flavorText: String,
-    val language: NamedApiResource,
-    val version: NamedApiResource,
+    val language: NamedAPIResource,
+    val version: NamedAPIResource,
 )

@@ -14,17 +14,17 @@ koin = "3.5.3"
 sqldelight = "2.0.0"
 kotlinxdatetime = "0.5.0"
 kotlinxSerialization = "1.6.3"
-lifecycle = "2.7.0"
+lifecycle = "2.8.0"
+coroutine = "1.8.1"
+navigation = "2.7.0-alpha07"
 
 [libraries]
-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 
-androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
-androidx-lifecycle-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
-androidx-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+jetbrain-lifecycle-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle"}
+jetbrain-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation" }
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -54,6 +54,7 @@ sqldelight-driver-web = { module = "app.cash.sqldelight:web-worker-driver", vers
 
 kotlinx-datetime-core = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxdatetime" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+kotlinx-coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutine" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

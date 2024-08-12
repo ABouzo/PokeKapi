@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.location
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 import me.bouzo.pokeKapi.data.models.utility.VersionEncounterDetail
 
 /**
@@ -13,7 +13,7 @@ import me.bouzo.pokeKapi.data.models.utility.VersionEncounterDetail
 @Serializable
 data class LocationAreaEncounter(
     @SerialName("location_area")
-    val locationArea: NamedApiResource,
+    val locationArea: NamedAPIResource,
 
     @SerialName("version_details")
     val versionDetails: List<VersionEncounterDetail>

@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.pokemonSpecies
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property isDefault Whether this variety is the default variety.
@@ -11,5 +11,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 @Serializable
 data class PokemonSpeciesVariety(
     @SerialName("is_default") val isDefault: Boolean,
-    val pokemon: NamedApiResource,
+    val pokemon: NamedAPIResource,
 )

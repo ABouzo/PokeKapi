@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.moves.targets
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Description
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Targets moves can be directed at during battle. Targets can be Pokémon, environments or
@@ -19,6 +19,6 @@ data class MoveTarget(
     val id: Int,
     val name: String,
     val descriptions: List<Description>,
-    val moves: List<NamedApiResource>,
+    val moves: List<NamedAPIResource>,
     val names: List<Name>
 )

@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.egg
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may
@@ -18,5 +18,5 @@ data class EggGroup(
     val id: Int,
     val name: String,
     val names: List<Name>,
-    @SerialName("pokemon_species") val pokemonSpecies: List<NamedApiResource>
+    @SerialName("pokemon_species") val pokemonSpecies: List<NamedAPIResource>
 )

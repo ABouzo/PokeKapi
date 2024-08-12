@@ -1,7 +1,7 @@
 package me.bouzo.pokeKapi.data.models.pokemon.stats
 
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property increase A list of natures and how they change the referenced stat.
@@ -9,6 +9,6 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
  */
 @Serializable
 data class NatureStatAffectSets(
-    val increase: List<NamedApiResource>,
-    val decrease: List<NamedApiResource>,
+    val increase: List<NamedAPIResource>,
+    val decrease: List<NamedAPIResource>,
 )

@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.locations.palParkArea
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property baseScore The base score given to the player when this Pokémon is caught during a pal park run.
@@ -13,5 +13,5 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 data class PalParkEncounterSpecies(
     @SerialName("base_score") val baseScore: Int,
     val rate: Int,
-    @SerialName("pokemon_species") val pokemonSpecies: NamedApiResource
+    @SerialName("pokemon_species") val pokemonSpecies: NamedAPIResource
 )

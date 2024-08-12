@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.moves.move
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * @property ailment The status ailment this move inflicts on its target.
@@ -20,8 +20,8 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
  */
 @Serializable
 data class MoveMetaData(
-    val ailment: NamedApiResource,
-    val category: NamedApiResource,
+    val ailment: NamedAPIResource,
+    val category: NamedAPIResource,
     @SerialName("min_hits") val minHits: Int?,
     @SerialName("max_hits") val maxHits: Int?,
     @SerialName("min_turns") val minTurns: Int?,

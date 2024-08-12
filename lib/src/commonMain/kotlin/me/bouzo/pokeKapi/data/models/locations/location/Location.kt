@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.GenerationGameIndex
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Locations that can be visited within the games. Locations make up sizable portions of regions,
@@ -21,9 +21,9 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 data class Location(
     val id: Int,
     val name: String,
-    val region: NamedApiResource,
+    val region: NamedAPIResource,
     val names: List<Name>,
     @SerialName("game_indices")
     val gameIndices: List<GenerationGameIndex>,
-    val areas: List<NamedApiResource>
+    val areas: List<NamedAPIResource>
 )

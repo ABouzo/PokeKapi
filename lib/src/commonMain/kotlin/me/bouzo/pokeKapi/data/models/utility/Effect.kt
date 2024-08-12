@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class Effect(
-    val effect: String, val language: NamedApiResource
+    val effect: String, val language: NamedAPIResource
 )

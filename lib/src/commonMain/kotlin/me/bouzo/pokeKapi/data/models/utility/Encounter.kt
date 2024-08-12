@@ -14,7 +14,7 @@ import kotlinx.serialization.Serializable
 data class Encounter(
     @SerialName("min_level") val minLevel: Int,
     @SerialName("max_level") val maxLevel: Int,
-    @SerialName("condition_values") val conditionValues: List<NamedApiResource>,
+    @SerialName("condition_values") val conditionValues: List<NamedAPIResource>,
     val chance: Int,
-    val method: NamedApiResource
+    val method: NamedAPIResource
 )

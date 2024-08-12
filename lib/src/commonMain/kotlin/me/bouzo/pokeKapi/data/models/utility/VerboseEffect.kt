@@ -12,5 +12,5 @@ import kotlinx.serialization.Serializable
 data class VerboseEffect(
     val effect: String,
     @SerialName("short_effect") val shortEffect: String,
-    val language: NamedApiResource
+    val language: NamedAPIResource
 )

@@ -2,7 +2,7 @@ package me.bouzo.pokeKapi.data.models.moves.ailments
 
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Move Ailments are status conditions caused by moves used during battle. See also
@@ -16,6 +16,6 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 data class MoveAilment(
     val id: Int,
     val name: String,
-    val moves: List<NamedApiResource>,
+    val moves: List<NamedAPIResource>,
     val names: List<Name>
 )

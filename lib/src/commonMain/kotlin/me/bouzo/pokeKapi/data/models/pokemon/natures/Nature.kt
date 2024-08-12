@@ -3,7 +3,7 @@ package me.bouzo.pokeKapi.data.models.pokemon.natures
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import me.bouzo.pokeKapi.data.models.utility.Name
-import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 
 /**
  * Natures influence how a Pokémon's stats grow.
@@ -21,10 +21,10 @@ import me.bouzo.pokeKapi.data.models.utility.NamedApiResource
 data class Nature(
     val id: Int,
     val name: String,
-    @SerialName("decreased_stat") val decreasedStat: NamedApiResource,
-    @SerialName("increased_stat") val increasedStat: NamedApiResource,
-    @SerialName("hates_flavor") val hatesFlavor: NamedApiResource,
-    @SerialName("likes_flavor") val likesFlavor: NamedApiResource,
+    @SerialName("decreased_stat") val decreasedStat: NamedAPIResource,
+    @SerialName("increased_stat") val increasedStat: NamedAPIResource,
+    @SerialName("hates_flavor") val hatesFlavor: NamedAPIResource,
+    @SerialName("likes_flavor") val likesFlavor: NamedAPIResource,
     @SerialName("pokeathlon_stat_changes") val pokeathlonStatChanges: List<NatureStatChange>,
     @SerialName("move_battle_style_preferences") val moveBattleStylePreferences: List<MoveBattleStylePreference>,
     val names: List<Name>
