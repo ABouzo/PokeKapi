@@ -9,6 +9,11 @@ import me.bouzo.pokeKapi.data.models.moves.learnMethods.MoveLearnMethod
 import me.bouzo.pokeKapi.data.models.moves.move.Move
 import me.bouzo.pokeKapi.data.models.moves.targets.MoveTarget
 
+/**
+ * Interface encapsulating all the endpoints within the Move Group on
+ * PokeApi's API
+ * See [PokeApi](https://pokeapi.co/docs/v2#moves-section)
+ */
 interface MoveApis {
     suspend fun getMove(id: Identifier): Result<Move>
     suspend fun getMoveAilment(id: Identifier): Result<MoveAilment>

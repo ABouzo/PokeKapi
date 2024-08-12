@@ -21,7 +21,7 @@ import me.bouzo.pokeKapi.data.models.pokemon.types.Type
 /**
  * Interface encapsulating all the endpoints within the Pokemon Group on
  * PokeApi's API
- * See [PokeApi](https://pokeapi.co/docs/v2#pokemon)
+ * See [PokeApi](https://pokeapi.co/docs/v2#pokemon-section)
  */
 interface PokemonApis {
     suspend fun getPokemon(id: Identifier): Result<Pokemon>

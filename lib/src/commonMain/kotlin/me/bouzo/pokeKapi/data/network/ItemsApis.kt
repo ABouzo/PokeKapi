@@ -7,6 +7,11 @@ import me.bouzo.pokeKapi.data.models.items.flingEffects.ItemFlingEffect
 import me.bouzo.pokeKapi.data.models.items.item.Item
 import me.bouzo.pokeKapi.data.models.items.pockets.ItemPocket
 
+/**
+ * Interface encapsulating all the endpoints within the Item Group on
+ * PokeApi's API
+ * See [PokeApi](https://pokeapi.co/docs/v2#items-section)
+ */
 interface ItemsApis {
     suspend fun getItem(id: Identifier): Result<Item>
     suspend fun getItemAttribute(id: Identifier): Result<ItemAttribute>
