@@ -1,6 +1,10 @@
 package me.bouzo.pokeKapi
 
 import me.bouzo.pokeKapi.data.network.BaseApi
+import me.bouzo.pokeKapi.data.network.EvolutionApis
+import me.bouzo.pokeKapi.data.network.EvolutionRemoteApis
+import me.bouzo.pokeKapi.data.network.GamesApis
+import me.bouzo.pokeKapi.data.network.GamesRemoteApis
 import me.bouzo.pokeKapi.data.network.ItemsApis
 import me.bouzo.pokeKapi.data.network.ItemsRemoteApis
 import me.bouzo.pokeKapi.data.network.LocationsApis
@@ -21,8 +25,11 @@ import me.bouzo.pokeKapi.data.network.PokemonRemoteApis
  * - [MachinesApis]
  * - [LocationsApis]
  * - [ItemsApis]
+ * - [GamesApis]
+ * - [EvolutionApis]
  */
-interface PokeKapi : PokemonApis, MoveApis, MachinesApis, LocationsApis, ItemsApis {
+interface PokeKapi : PokemonApis, MoveApis, MachinesApis, LocationsApis, ItemsApis, GamesApis,
+    EvolutionApis {
     companion object {
         fun create(): PokeKapi = PokeKapiImpl()
     }
@@ -33,7 +40,9 @@ internal class PokeKapiImpl private constructor(baseApi: BaseApi) : PokeKapi,
     MoveApis by MoveRemoteApis(baseApi),
     MachinesApis by MachinesRemoteApis(baseApi),
     LocationsApis by LocationsRemoteApis(baseApi),
-    ItemsApis by ItemsRemoteApis(baseApi) {
+    ItemsApis by ItemsRemoteApis(baseApi),
+    GamesApis by GamesRemoteApis(baseApi),
+    EvolutionApis by EvolutionRemoteApis(baseApi) {
 
     internal constructor() : this(baseApi = BaseApi())
 
