@@ -17,6 +17,8 @@ import me.bouzo.pokeKapi.data.models.pokemon.pokemonSpecies.PokemonSpecies
 import me.bouzo.pokeKapi.data.models.pokemon.shape.PokemonShape
 import me.bouzo.pokeKapi.data.models.pokemon.stats.Stat
 import me.bouzo.pokeKapi.data.models.pokemon.types.Type
+import me.bouzo.pokeKapi.data.models.utility.APIResourceList
+import me.bouzo.pokeKapi.data.models.utility.NamedAPIResourceList
 
 /**
  * Interface encapsulating all the endpoints within the Pokemon Group on
@@ -40,6 +42,22 @@ interface PokemonApis {
     suspend fun getPokeathlonStat(id: Identifier): Result<PokeathlonStat>
     suspend fun getPokemonLocationArea(id: Identifier): Result<List<LocationAreaEncounter>>
     suspend fun getType(id: Identifier): Result<Type>
+
+    suspend fun getAbilities(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getCharacteristics(limit: Int = 20, offset: Int = 0): Result<APIResourceList>
+    suspend fun getEggGroups(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getGenders(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getGrowthRates(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getNatures(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getPokeathlonStats(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getPokemon(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getPokemonColors(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getPokemonForms(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getPokemonHabitats(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getPokemonShapes(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getPokemonSpecies(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getStats(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
+    suspend fun getTypes(limit: Int = 20, offset: Int = 0): Result<NamedAPIResourceList>
 
     companion object
 }
@@ -81,4 +99,48 @@ internal class PokemonRemoteApis(private val baseApi: BaseApi) : PokemonApis {
 
     override suspend fun getStat(id: Identifier): Result<Stat> = baseApi.fetch("/stat/$id")
     override suspend fun getType(id: Identifier): Result<Type> = baseApi.fetch("/type/$id")
+
+    override suspend fun getAbilities(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/ability", limit, offset)
+
+    override suspend fun getCharacteristics(limit: Int, offset: Int): Result<APIResourceList> =
+        baseApi.fetchPagination("/characteristic", limit, offset)
+
+    override suspend fun getEggGroups(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/egg-group", limit, offset)
+
+    override suspend fun getGenders(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/gender", limit, offset)
+
+    override suspend fun getGrowthRates(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/growth-rate", limit, offset)
+
+    override suspend fun getNatures(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/nature", limit, offset)
+
+    override suspend fun getPokeathlonStats(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/pokeathlon-stat", limit, offset)
+
+    override suspend fun getPokemon(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/pokemon", limit, offset)
+
+    override suspend fun getPokemonColors(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/pokemon-color", limit, offset)
+
+    override suspend fun getPokemonForms(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/pokemon-form", limit, offset)
+
+    override suspend fun getPokemonHabitats(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/pokemon-habitat", limit, offset)
+
+    override suspend fun getPokemonShapes(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/pokemon-shape", limit, offset)
+
+    override suspend fun getPokemonSpecies(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/pokemon-species", limit, offset)
+
+    override suspend fun getStats(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/stat", limit, offset)
+    override suspend fun getTypes(limit: Int, offset: Int): Result<NamedAPIResourceList> =
+        baseApi.fetchPagination("/type", limit, offset)
 }

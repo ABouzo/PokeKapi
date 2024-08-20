@@ -4,13 +4,13 @@
 
 | Endpoint Group | Pagination | Models | Endpoint | Caching |
 |:---------------|:----------:|:------:|:--------:|:-------:|
-| Berries        |    TODO    |        |          |  TODO   | 
-| Contests       |    TODO    |        |          |  TODO   | 
-| Encounters     |    TODO    |        |          |  TODO   | 
-| Evolution      |    TODO    |        |          |  TODO   | 
-| Games          |    TODO    |  100%  |   100%   |  TODO   | 
-| Items          |    TODO    |  100%  |   100%   |  TODO   | 
-| Locations      |    TODO    |  100%  |   100%   |  TODO   | 
-| Machines       |    TODO    |  100%  |   100%   |  TODO   | 
-| Moves          |    TODO    |  100%  |   100%   |  TODO   | 
-| Pokémon        |    TODO    |  100%  |   100%   |  TODO   |
+| Berries        |    100%    |  100%  |   100%   |  TODO   | 
+| Contests       |    100%    |  100%  |   100%   |  TODO   | 
+| Encounters     |    100%    |  100%  |   100%   |  TODO   | 
+| Evolution      |    100%    |  100%  |   100%   |  TODO   | 
+| Games          |    100%    |  100%  |   100%   |  TODO   | 
+| Items          |    100%    |  100%  |   100%   |  TODO   | 
+| Locations      |    100%    |  100%  |   100%   |  TODO   | 
+| Machines       |    100%    |  100%  |   100%   |  TODO   | 
+| Moves          |    100%    |  100%  |   100%   |  TODO   | 
+| Pokémon        |    100%    |  100%  |   100%   |  TODO   |

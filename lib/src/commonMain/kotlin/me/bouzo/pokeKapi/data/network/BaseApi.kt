@@ -32,4 +32,10 @@ internal class BaseApi : PokeKapiKoinComponent() {
                 Result.failure(Errors.Network(ex))
             }
         }
+
+    suspend inline fun <reified T> fetchPagination(
+        endpoint: String,
+        limit: Int,
+        offset: Int
+    ): Result<T> = fetch("$endpoint?limit=$limit&offset=$offset")
 }
