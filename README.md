@@ -8,7 +8,7 @@
 | Contests       |    TODO    |        |          |  TODO   | 
 | Encounters     |    TODO    |        |          |  TODO   | 
 | Evolution      |    TODO    |        |          |  TODO   | 
-| Games          |    TODO    |        |          |  TODO   | 
+| Games          |    TODO    |  100%  |   100%   |  TODO   | 
 | Items          |    TODO    |  100%  |   100%   |  TODO   | 
 | Locations      |    TODO    |  100%  |   100%   |  TODO   | 
 | Machines       |    TODO    |  100%  |   100%   |  TODO   | 
