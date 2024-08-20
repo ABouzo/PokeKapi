@@ -57,6 +57,12 @@ kotlin {
                 implementation(libs.ktor.client.js)
             }
         }
+        commonTest {
+            dependencies {
+                implementation(libs.kotlin.test)
+                implementation(libs.benasher.uuid)
+            }
+        }
     }
 }
 

@@ -7,6 +7,8 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class APIResource(
-    val url: String
-)
+    override val url: String
+) : RemoteResource {
+    constructor(id: Int, category: String) : this(resourceUrl(id, category))
+}
 
