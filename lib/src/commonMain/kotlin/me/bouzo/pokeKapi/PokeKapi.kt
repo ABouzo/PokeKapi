@@ -1,6 +1,12 @@
 package me.bouzo.pokeKapi
 
 import me.bouzo.pokeKapi.data.network.BaseApi
+import me.bouzo.pokeKapi.data.network.BerriesApis
+import me.bouzo.pokeKapi.data.network.BerriesRemoteApis
+import me.bouzo.pokeKapi.data.network.ContestsApis
+import me.bouzo.pokeKapi.data.network.ContestsRemoteApis
+import me.bouzo.pokeKapi.data.network.EncountersApis
+import me.bouzo.pokeKapi.data.network.EncountersRemoteApis
 import me.bouzo.pokeKapi.data.network.EvolutionApis
 import me.bouzo.pokeKapi.data.network.EvolutionRemoteApis
 import me.bouzo.pokeKapi.data.network.GamesApis
@@ -27,9 +33,12 @@ import me.bouzo.pokeKapi.data.network.PokemonRemoteApis
  * - [ItemsApis]
  * - [GamesApis]
  * - [EvolutionApis]
+ * - [EncountersApis]
+ * - [ContestsApis]
+ * - [BerriesApis]
  */
 interface PokeKapi : PokemonApis, MoveApis, MachinesApis, LocationsApis, ItemsApis, GamesApis,
-    EvolutionApis {
+    EvolutionApis, EncountersApis, ContestsApis, BerriesApis {
     companion object {
         fun create(): PokeKapi = PokeKapiImpl()
     }
@@ -42,7 +51,10 @@ internal class PokeKapiImpl private constructor(baseApi: BaseApi) : PokeKapi,
     LocationsApis by LocationsRemoteApis(baseApi),
     ItemsApis by ItemsRemoteApis(baseApi),
     GamesApis by GamesRemoteApis(baseApi),
-    EvolutionApis by EvolutionRemoteApis(baseApi) {
+    EvolutionApis by EvolutionRemoteApis(baseApi),
+    EncountersApis by EncountersRemoteApis(baseApi),
+    ContestsApis by ContestsRemoteApis(baseApi),
+    BerriesApis by BerriesRemoteApis(baseApi) {
 
     internal constructor() : this(baseApi = BaseApi())
 
