@@ -9,7 +9,7 @@ interface RemoteResource {
 private val RemoteResource.idInt: Int
     get() = url.split("/")[4].toInt()
 
-val RemoteResource.identifier: Identifier
+val RemoteResource.identifier: Identifier.Id
     get() = Identifier.Id(idInt)
 
 val RemoteResource.category: String

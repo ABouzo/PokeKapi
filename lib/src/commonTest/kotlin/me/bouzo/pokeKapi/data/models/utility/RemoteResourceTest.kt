@@ -11,7 +11,7 @@ class RemoteResourceTest {
     fun given_RemoteResource_with_url_THEN_return_id() {
         createExpected().forEach { (id, category) ->
             val remoteResource = APIResource(id, category)
-            assertEquals(id, remoteResource.id)
+            assertEquals(id, remoteResource.identifier.id)
         }
     }
 
@@ -19,7 +19,7 @@ class RemoteResourceTest {
     fun given_RemoteResource_with_url_THEN_return_category() {
         createExpected().forEach { (id, category) ->
             val remoteResource = APIResource(id, category)
-            assertEquals(id, remoteResource.id)
+            assertEquals(id, remoteResource.identifier.id)
         }
     }
 
