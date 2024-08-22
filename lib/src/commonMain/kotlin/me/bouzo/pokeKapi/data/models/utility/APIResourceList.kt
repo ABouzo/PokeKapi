@@ -4,8 +4,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class APIResourceList(
-    val count: Int,
-    val next: String? = null,
-    val previous: String? = null,
-    val results: List<APIResource>
-)
+    override val count: Int,
+    override val next: String? = null,
+    override val previous: String? = null,
+    override val results: List<APIResource>
+) : RemoteResourceList<APIResource>

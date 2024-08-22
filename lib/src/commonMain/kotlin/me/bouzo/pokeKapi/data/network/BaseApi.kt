@@ -34,8 +34,10 @@ internal class BaseApi : PokeKapiKoinComponent() {
         }
 
     suspend inline fun <reified T> fetchPagination(
-        endpoint: String,
-        limit: Int,
-        offset: Int
+        endpoint: String, limit: Int, offset: Int
     ): Result<T> = fetch("$endpoint?limit=$limit&offset=$offset")
+
+    companion object {
+        const val ROOT_ENDPOINT = "https://pokeapi.co/api/v2"
+    }
 }
