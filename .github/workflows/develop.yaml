@@ -1,0 +1,81 @@
+name: Build, Test, and Publish to GitHub Packages
+on:
+  push:
+    branches:
+      - 'develop'
+jobs:
+  testNodeJs:
+    runs-on: linux-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4.0.3
+      - name: Test on NodeJS
+        run: ./gradlew :lib:jsNodeTest
+  testBrowserJs:
+    runs-on: linux-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      - uses: browser-actions/setup-firefox@v1.5.2
+      - uses: browser-actions/setup-chrome@v1.7.2
+      - name: Test on Browser
+        run: ./gradlew :lib:jsBrowserTest
+  testJvm:
+    runs-on: linux-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      - name: Test on JVM
+        run: ./gradlew :lib:jvmTest
+  testIos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      - name: Test on iOS Simulator
+        run: ./gradlew :lib:iosSimulatorArm64Test
+  publish:
+    runs-on: macos-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      - name: Publish
+        run: ./gradlew :lib:publishAllPublicationsToMavenRepository
+        env:
+          GITHUB_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}

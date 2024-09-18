@@ -1,10 +1,10 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
 //    alias(libs.plugins.sqlDelight)
     alias(libs.plugins.kotlinxSerialization)
+    alias(libs.plugins.researchgate.release)
     `maven-publish`
 }
 
@@ -18,8 +18,17 @@ kotlin {
         }
     }
     jvm()
-    js().browser()
-    js().nodejs()
+    js {
+        browser {
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                    useFirefoxHeadless()
+                }
+            }
+        }
+        nodejs()
+    }
     listOf(
         iosX64(),
         iosArm64(),
@@ -78,16 +87,23 @@ android {
     }
 }
 
-project.afterEvaluate {
-    publishing {
-        publications {
-//            libraryProject(MavenPublication) {
-//                groupId = "com.ruchiram4"
-//                artifactId = "networking-release"
-//                version = "1.0"
-//                artifact bundleReleaseAar
-//            }
+
+
+publishing {
+    repositories {
+        maven {
+            setUrl("https://maven.pkg.github.com/ABouzo/PokeKapi")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
         }
+    }
+}
+
+release {
+    git {
+        requireBranch = "release"
     }
 }
 
