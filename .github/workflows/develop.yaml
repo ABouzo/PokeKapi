@@ -65,6 +65,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+    needs: [testNodeJs, testBrowserJs, testJvm, testIos]
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
