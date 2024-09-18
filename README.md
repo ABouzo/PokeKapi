@@ -1,5 +1,7 @@
 # Kotlin Library for PokeAPI
 
+[![Build, Test, and Publish to GitHub Packages](https://github.com/ABouzo/PokeKapi/actions/workflows/develop.yaml/badge.svg)](https://github.com/ABouzo/PokeKapi/actions/workflows/develop.yaml)
+
 ## Progress
 
 | Endpoint Group | Pagination | Models | Endpoint | Caching |
