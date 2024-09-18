@@ -47,7 +47,7 @@ kotlin {
             implementation(libs.jetbrain.lifecycle.compose)
             implementation(libs.kotlinx.coroutine)
             implementation(libs.jetbrain.navigation.compose)
-            implementation(projects.lib)
+            implementation(projects.pokeKapi)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
