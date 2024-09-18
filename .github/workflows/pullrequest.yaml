@@ -1,12 +1,12 @@
-name: Test and Publish
+name: Pull Request
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
+    types: [ready_for_review]
     branches:
       - 'develop'
 jobs:
-  publish:
-    runs-on: macos-latest
+  test:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -25,8 +25,8 @@ jobs:
         uses: browser-actions/setup-firefox@v1.5.2
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1.7.2
-      - name: Test and Publish
-        run: ./gradlew :lib:iosSimulatorArm64Test :lib:jsNodeTest :lib:jsBrowserTest :lib:jvmTest :lib:publishAllPublicationsToMavenRepository
+      - name: Test
+        run: ./gradlew :lib:jsNodeTest :lib:jsBrowserTest :lib:jvmTest
         env:
           GITHUB_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
