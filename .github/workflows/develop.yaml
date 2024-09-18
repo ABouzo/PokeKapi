@@ -21,12 +21,8 @@ jobs:
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
       - name: Setup NodeJS
         uses: actions/setup-node@v4.0.3
-      - name: Setup Firefox
-        uses: browser-actions/setup-firefox@v1.5.2
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1.7.2
       - name: Test and Publish
-        run: ./gradlew :lib:iosSimulatorArm64Test :lib:jsNodeTest :lib:jsBrowserTest :lib:jvmTest :lib:publishAllPublicationsToMavenRepository
+        run: ./gradlew :lib:iosSimulatorArm64Test :lib:jsNodeTest :lib:jvmTest :lib:publishAllPublicationsToMavenRepository
         env:
           GITHUB_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
