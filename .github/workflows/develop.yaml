@@ -1,11 +1,14 @@
 name: Build, Test, and Publish to GitHub Packages
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'develop'
 jobs:
   testNodeJs:
-    runs-on: [x64]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -20,7 +23,9 @@ jobs:
       - name: Test on NodeJS
         run: ./gradlew :lib:jsNodeTest
   testBrowserJs:
-    runs-on: [x64]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -35,7 +40,9 @@ jobs:
       - name: Test on Browser
         run: ./gradlew :lib:jsBrowserTest
   testJvm:
-    runs-on: [x64]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -48,7 +55,9 @@ jobs:
       - name: Test on JVM
         run: ./gradlew :lib:jvmTest
   testIos:
-    runs-on: [macos]
+    runs-on: macos-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -61,7 +70,7 @@ jobs:
       - name: Test on iOS Simulator
         run: ./gradlew :lib:iosSimulatorArm64Test
   publish:
-    runs-on: [macos]
+    runs-on: macos-latest
     permissions:
       contents: read
       packages: write
