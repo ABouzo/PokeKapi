@@ -22,7 +22,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4.0.3
       - name: Test
-        run: ./gradlew :lib:jsNodeTest :lib:jvmTest
+        run: ./gradlew :poke-kapi:jsNodeTest :poke-kapi:jvmTest
         env:
           GITHUB_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
