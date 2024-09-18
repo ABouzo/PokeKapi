@@ -5,7 +5,7 @@ on:
       - 'develop'
 jobs:
   testNodeJs:
-    runs-on: linux-latest
+    runs-on: [x64]
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -20,7 +20,7 @@ jobs:
       - name: Test on NodeJS
         run: ./gradlew :lib:jsNodeTest
   testBrowserJs:
-    runs-on: linux-latest
+    runs-on: [x64]
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -35,7 +35,7 @@ jobs:
       - name: Test on Browser
         run: ./gradlew :lib:jsBrowserTest
   testJvm:
-    runs-on: linux-latest
+    runs-on: [x64]
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -48,7 +48,7 @@ jobs:
       - name: Test on JVM
         run: ./gradlew :lib:jvmTest
   testIos:
-    runs-on: macos-latest
+    runs-on: [macos]
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -61,7 +61,7 @@ jobs:
       - name: Test on iOS Simulator
         run: ./gradlew :lib:iosSimulatorArm64Test
   publish:
-    runs-on: macos-latest
+    runs-on: [macos]
     permissions:
       contents: read
       packages: write
