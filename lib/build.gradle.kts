@@ -8,6 +8,7 @@ plugins {
     `maven-publish`
 }
 
+group = "me.bouzo"
 kotlin {
 
     androidTarget {
@@ -90,6 +91,9 @@ android {
 
 
 publishing {
+    publications.withType<MavenPublication> {
+        artifactId = rootProject.name
+    }
     repositories {
         maven {
             setUrl("https://maven.pkg.github.com/ABouzo/PokeKapi")
