@@ -22,7 +22,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4.0.3
       - name: Test and Publish
-        run: ./gradlew :poke-kapi:iosSimulatorArm64Test :poke-kapi:jsNodeTest :poke-kapi:jvmTest :poke-kapi:publishAllPublicationsToMavenRepository
+        run: ./gradlew :poke-kapi:iosSimulatorArm64Test :poke-kapi:jsNodeTest :poke-kapi:jvmTest
         env:
-          GITHUB_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
-          GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+          PUBLISH_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}

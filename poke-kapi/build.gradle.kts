@@ -1,3 +1,5 @@
+import com.vanniktech.maven.publish.SonatypeHost
+import kotlin.math.sign
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -5,7 +7,7 @@ plugins {
 //    alias(libs.plugins.sqlDelight)
     alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.researchgate.release)
-    `maven-publish`
+    alias(libs.plugins.vanniktech.maven.publish)
 }
 
 group = "me.bouzo"
@@ -88,16 +90,33 @@ android {
     }
 }
 
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
-
-publishing {
-    repositories {
-        maven {
-            setUrl("https://maven.pkg.github.com/ABouzo/PokeKapi")
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+    signAllPublications()
+    pom {
+        name = "PokeKapi Wrapper"
+        description = "A Kotlin Multiplaform Wrapper for Pokeapi"
+        inceptionYear = "2024"
+        url = "https://github.com/ABouzo/PokeKapi"
+        licenses {
+            license {
+                name.set("The Apache License, Version 2.0")
+                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
             }
+        }
+        developers {
+            developer {
+                id = "ABouzo"
+                name = "Angel Bouzo"
+                url = "https://github.com/ABouzo"
+            }
+        }
+        scm {
+            url = "https://github.com/ABouzo/PokeKapi"
+            connection = "scm:git:git://github.com:ABouzo/PokeKapi.git"
+            developerConnection = "scm:git:ssh://git@github.com:ABouzo/PokeKapi.git"
         }
     }
 }
