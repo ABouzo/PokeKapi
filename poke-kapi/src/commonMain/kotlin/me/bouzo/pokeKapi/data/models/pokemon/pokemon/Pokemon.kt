@@ -155,7 +155,38 @@ data class PokemonSprites(
     @SerialName("back_default") val backDefault: String?,
     @SerialName("back_shiny") val backShiny: String?,
     @SerialName("back_female") val backFemale: String?,
+    @SerialName("back_shiny_female") val backShinyFemale: String?,
+    @SerialName("other") val other: PokemonSpritesBase
+)
+
+/**
+ * @property frontDefault The default depiction of this Pokémon from the front in battle.
+ * @property frontShiny The shiny depiction of this Pokémon from the front in battle.
+ * @property frontFemale The female depiction of this Pokémon from the front in battle.
+ * @property frontShinyFemale The shiny female depiction of this Pokémon from the front in battle.
+ * @property backDefault The default depiction of this Pokémon from the back in battle.
+ * @property backShiny The shiny depiction of this Pokémon from the back in battle.
+ * @property backFemale The female depiction of this Pokémon from the back in battle.
+ * @property backShinyFemale The shiny female depiction of this Pokémon from the back in battle.
+ */
+@Serializable
+data class PokemonSpritesBase(
+    @SerialName("front_default") val frontDefault: String?,
+    @SerialName("front_shiny") val frontShiny: String?,
+    @SerialName("front_female") val frontFemale: String?,
+    @SerialName("front_shiny_female") val frontShinyFemale: String?,
+    @SerialName("back_default") val backDefault: String?,
+    @SerialName("back_shiny") val backShiny: String?,
+    @SerialName("back_female") val backFemale: String?,
     @SerialName("back_shiny_female") val backShinyFemale: String?
+)
+
+@Serializable
+data class PokemonSpritesOther(
+    @SerialName("deal_world") val dreamWorld: PokemonSpritesBase,
+    @SerialName("home") val home: PokemonSpritesBase,
+    @SerialName("official-artwork") val officialArtwork: PokemonSpritesBase,
+    @SerialName("showdown") val showdown: PokemonSpritesBase
 )
 
 /**
