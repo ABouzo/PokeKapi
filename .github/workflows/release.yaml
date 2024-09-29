@@ -24,5 +24,7 @@ jobs:
       - name: Test and Publish
         run: ./gradlew :poke-kapi:iosSimulatorArm64Test :poke-kapi:jsNodeTest :poke-kapi:jvmTest :poke-kapi:publish
         env:
-          PUBLISH_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
-          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.ORG_GRADLE_PROJECT_MAVENCENTRALPASSWORD }}
+          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.ORG_GRADLE_PROJECT_MAVENCENTRALUSERNAME }}
+          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.ORG_GRADLE_PROJECT_SIGNINGINMEMORYKEY }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.ORG_GRADLE_PROJECT_SIGNINGINMEMORYKEYPASSWORD }}
