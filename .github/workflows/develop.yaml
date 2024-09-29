@@ -23,6 +23,3 @@ jobs:
         uses: actions/setup-node@v4.0.3
       - name: Test and Publish
         run: ./gradlew :poke-kapi:iosSimulatorArm64Test :poke-kapi:jsNodeTest :poke-kapi:jvmTest
-        env:
-          PUBLISH_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
-          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
