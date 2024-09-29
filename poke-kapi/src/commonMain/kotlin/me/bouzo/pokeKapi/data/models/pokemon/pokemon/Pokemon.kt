@@ -156,7 +156,7 @@ data class PokemonSprites(
     @SerialName("back_shiny") val backShiny: String?,
     @SerialName("back_female") val backFemale: String?,
     @SerialName("back_shiny_female") val backShinyFemale: String?,
-    @SerialName("other") val other: PokemonSpritesBase
+    @SerialName("other") val other: PokemonSpritesOther
 )
 
 /**
