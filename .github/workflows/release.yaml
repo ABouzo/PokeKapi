@@ -1,0 +1,28 @@
+name: Test and Publish
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'release'
+jobs:
+  publish:
+    runs-on: macos-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4.0.3
+      - name: Test and Publish
+        run: ./gradlew :poke-kapi:iosSimulatorArm64Test :poke-kapi:jsNodeTest :poke-kapi:jvmTest :poke-kapi:publish
+        env:
+          PUBLISH_ACTOR: ${{ secrets.PUBLISH_ACTOR }}
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
