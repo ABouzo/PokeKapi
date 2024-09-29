@@ -1,3 +1,4 @@
+import com.android.build.gradle.internal.ide.kmp.KotlinAndroidSourceSetMarker.Companion.android
 import com.vanniktech.maven.publish.SonatypeHost
 import kotlin.math.sign
 
@@ -52,6 +53,11 @@ kotlin {
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.contentNegotiation)
                 implementation(libs.ktor.serialization.kotlinx.json)
+            }
+        }
+        androidMain {
+            dependencies {
+                implementation(libs.ktor.client.okhttp)
             }
         }
         jvmMain {
