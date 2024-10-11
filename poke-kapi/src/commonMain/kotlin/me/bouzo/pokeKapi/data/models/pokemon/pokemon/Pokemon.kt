@@ -195,5 +195,5 @@ data class PokemonSpritesOther(
  */
 @Serializable
 data class PokemonCries(
-    val latest: String, val legacy: String
+    val latest: String, val legacy: String? = null
 )

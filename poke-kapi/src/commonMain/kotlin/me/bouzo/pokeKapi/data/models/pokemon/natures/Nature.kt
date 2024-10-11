@@ -21,11 +21,11 @@ import me.bouzo.pokeKapi.data.models.utility.NamedAPIResource
 data class Nature(
     val id: Int,
     val name: String,
-    @SerialName("decreased_stat") val decreasedStat: NamedAPIResource,
-    @SerialName("increased_stat") val increasedStat: NamedAPIResource,
-    @SerialName("hates_flavor") val hatesFlavor: NamedAPIResource,
-    @SerialName("likes_flavor") val likesFlavor: NamedAPIResource,
-    @SerialName("pokeathlon_stat_changes") val pokeathlonStatChanges: List<NatureStatChange>,
-    @SerialName("move_battle_style_preferences") val moveBattleStylePreferences: List<MoveBattleStylePreference>,
+    @SerialName("decreased_stat") val decreasedStat: NamedAPIResource? = null,
+    @SerialName("increased_stat") val increasedStat: NamedAPIResource? = null,
+    @SerialName("hates_flavor") val hatesFlavor: NamedAPIResource? = null,
+    @SerialName("likes_flavor") val likesFlavor: NamedAPIResource? = null,
+    @SerialName("pokeathlon_stat_changes") val pokeathlonStatChanges: List<NatureStatChange>? = null,
+    @SerialName("move_battle_style_preferences") val moveBattleStylePreferences: List<MoveBattleStylePreference>? = null,
     val names: List<Name>
 )

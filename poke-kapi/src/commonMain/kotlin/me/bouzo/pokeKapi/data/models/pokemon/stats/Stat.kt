@@ -28,6 +28,6 @@ data class Stat(
     @SerialName("affecting_moves") val affectingMoves: MoveStatAffectSets,
     @SerialName("affecting_natures") val affectingNatures: NatureStatAffectSets,
     val characteristics: List<APIResource>,
-    @SerialName("move_damage_class") val moveDamageClass: NamedAPIResource,
+    @SerialName("move_damage_class") val moveDamageClass: NamedAPIResource? = null,
     val names: List<Name>,
 )

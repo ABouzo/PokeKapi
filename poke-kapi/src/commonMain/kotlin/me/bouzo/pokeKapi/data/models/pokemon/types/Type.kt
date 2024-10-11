@@ -29,7 +29,7 @@ data class Type(
     @SerialName("past_damage_relations") val pastDamageRelations: List<TypeRelationsPast>,
     @SerialName("game_indices") val gameIndices: List<GenerationGameIndex>,
     val generation: NamedAPIResource,
-    @SerialName("move_damage_class") val moveDamageClass: NamedAPIResource,
+    @SerialName("move_damage_class") val moveDamageClass: NamedAPIResource? = null,
     val names: List<Name>,
     val pokemon: List<TypePokemon>,
     val moves: List<NamedAPIResource>
