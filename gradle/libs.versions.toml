@@ -14,7 +14,6 @@ koin = "3.5.3"
 sqldelight = "2.0.0"
 kotlinxdatetime = "0.5.0"
 kotlinxSerialization = "1.6.3"
-kotlinxio = "0.5.4"
 lifecycle = "2.8.0"
 coroutine = "1.8.1"
 navigation = "2.7.0-alpha07"
@@ -62,7 +61,6 @@ sqldelight-driver-web = { module = "app.cash.sqldelight:web-worker-driver", vers
 kotlinx-datetime-core = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxdatetime" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 kotlinx-coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutine" }
-kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinxio"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
