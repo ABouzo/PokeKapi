@@ -53,6 +53,7 @@ kotlin {
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.contentNegotiation)
                 implementation(libs.ktor.serialization.kotlinx.json)
+                implementation(libs.kotlinx.coroutine)
             }
         }
         androidMain {
@@ -78,7 +79,6 @@ kotlin {
         commonTest {
             dependencies {
                 implementation(libs.kotlin.test)
-                implementation(libs.kotlinx.io.core)
                 implementation(libs.benasher.uuid)
             }
         }
